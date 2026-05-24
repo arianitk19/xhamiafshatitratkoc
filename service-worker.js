@@ -12,7 +12,7 @@ const PRECACHE=[
   './assets/icons/icon-144.png','./assets/icons/icon-152.png','./assets/icons/icon-192.png',
   './assets/icons/icon-384.png','./assets/icons/icon-512.png',
   './assets/icons/favicon-16.png','./assets/icons/favicon-32.png','./assets/icons/apple-touch-icon.png',
-  './assets/gallery/gallery-1.jpg','./assets/gallery/gallery-2.jpg','./assets/gallery/gallery-3.jpg',
+  './assets/gallery/xhamiabrenda1.jpg','./assets/gallery/xhamiabrenda1.jpg','./assets/gallery/xhamiabrenda1.jpg',
   './assets/gallery/gallery-4.jpg','./assets/gallery/gallery-5.jpg','./assets/gallery/gallery-6.jpg',
   './assets/gallery/gallery-1-thumb.jpg','./assets/gallery/gallery-2-thumb.jpg','./assets/gallery/gallery-3-thumb.jpg',
   './assets/gallery/gallery-4-thumb.jpg','./assets/gallery/gallery-5-thumb.jpg','./assets/gallery/gallery-6-thumb.jpg'
