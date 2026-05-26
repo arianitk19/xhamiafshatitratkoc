@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#13182E"/><stop offset="100%" stop-color="#28463A"/></linearGradient>
+    <linearGradient id="mihrab" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#BFA46F"/><stop offset="100%" stop-color="#A88E58"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#s2)"/>
+  <path d="M250 600 L250 350 a150 150 0 0 1 300 0 L550 600 Z" fill="url(#mihrab)" opacity="0.92"/>
+  <path d="M280 600 L280 360 a120 120 0 0 1 240 0 L520 600 Z" fill="#0B1020"/>
+  <g fill="#D6C7A1" opacity="0.85">
+    <circle cx="400" cy="380" r="6"/>
+    <circle cx="360" cy="430" r="4"/>
+    <circle cx="440" cy="430" r="4"/>
+    <circle cx="400" cy="500" r="5"/>
+  </g>
+  <g stroke="#BFA46F" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M280 600 L280 360 a120 120 0 0 1 240 0 L520 600"/>
+  </g>
+</svg>

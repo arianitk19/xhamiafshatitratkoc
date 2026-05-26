@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0E1430"/><stop offset="100%" stop-color="#264A37"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#s5)"/>
+  <g opacity="0.4" fill="#fff"><circle cx="100" cy="60" r="1"/><circle cx="200" cy="120" r="1.5"/><circle cx="380" cy="80" r="1"/><circle cx="560" cy="140" r="1"/><circle cx="700" cy="60" r="1.5"/></g>
+  <!-- tall minaret centered -->
+  <g fill="#D6C7A1">
+    <rect x="365" y="150" width="70" height="600"/>
+    <rect x="345" y="370" width="110" height="20"/>
+    <rect x="345" y="500" width="110" height="20"/>
+  </g>
+  <g fill="#BFA46F">
+    <polygon points="365,150 435,150 400,90"/>
+    <rect x="396" y="60" width="8" height="34"/>
+    <path d="M400 36 a14 14 0 1 0 0.1 0 a10 10 0 1 1 -0.1 0 z"/>
+  </g>
+  <!-- Ground -->
+  <rect x="0" y="720" width="800" height="80" fill="#1F3B2C"/>
+</svg>
