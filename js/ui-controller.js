@@ -22,7 +22,7 @@ const state={
 const GALLERY_ITEMS=[
   { src:'', title:'Pamja jashtme' },
   { src:'', title:'Mihrabi' },
-  { src:'', title:'Brendia' },
+  { src:'xhamiabrenda1.jpg', title:'Brendia' },
   { src:'', title:'Drita e mengjesit' },
   { src:'', title:'Minarja' },
   { src:'', title:'Hyrja kryesore' }
