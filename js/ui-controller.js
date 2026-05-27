@@ -19,13 +19,13 @@ const state={
  *   { src: 'assets/gallery/foto-1.jpg', title: '...' }  -- local file
  *   { src: '', title: '...' }  -- placeholder (shows nice gradient placeholder)
  */
-const GALLERY_ITEMS=[
-  { src:'', title:'Pamja jashtme' },
-  { src:'', title:'Mihrabi' },
-  { src:'xhamiabrenda1.jpg', title:'Brendia' },
-  { src:'', title:'Drita e mengjesit' },
-  { src:'', title:'Minarja' },
-  { src:'', title:'Hyrja kryesore' }
+const GALLERY_ITEMS = [
+  { src:'assets/gallery/xhamia1.jpg', title:'Pamja jashtme' },
+  { src:'assets/gallery/xhamia2.jpg', title:'Mihrabi' },
+  { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brendia' },
+  { src:'assets/gallery/xhamia3.jpg', title:'Drita e mengjesit' },
+  { src:'assets/gallery/xhamia4.jpg', title:'Minarja' },
+  { src:'assets/gallery/xhamia5.jpg', title:'Hyrja kryesore' }
 ];
 
 function tinyHaptic(){if(!state.prefs||state.prefs.hapticEnabled===false)return;try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}}
