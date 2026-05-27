@@ -20,12 +20,12 @@ const state={
  *   { src: '', title: '...' }  -- placeholder (shows nice gradient placeholder)
  */
 const GALLERY_ITEMS = [
-  { src:'assets/gallery/xhamia1.jpg', title:'Pamja jashtme' },
-  { src:'assets/gallery/xhamia2.jpg', title:'Mihrabi' },
-  { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brendia' },
-  { src:'assets/gallery/xhamiabrenda2.jpg', title:'Drita e mengjesit' },
-  { src:'assets/gallery/xhamiabrenda3.jpg', title:'Minarja' },
-  { src:'assets/gallery/xhamiajasht1.jpg', title:'Hyrja kryesore' }
+  { src:'assets/gallery/xhamiaa1.jpg', title:'Pamja jashtme' },
+  { src:'assets/gallery/xhamiajasht2.jpg', title:'Pamje e Jashtme' },
+  { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brenda' },
+  { src:'assets/gallery/xhamiabrenda2.jpg', title:'Brenda' },
+  { src:'assets/gallery/xhamiabrenda3.jpg', title:'Brenda' },
+  { src:'assets/gallery/xhamiajasht1.jpg', title:'Minarja' }
 ];
 
 function tinyHaptic(){if(!state.prefs||state.prefs.hapticEnabled===false)return;try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}}
