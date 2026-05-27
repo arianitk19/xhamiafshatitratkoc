@@ -25,7 +25,7 @@ const GALLERY_ITEMS = [
   { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brendia' },
   { src:'assets/gallery/xhamiabrenda2.jpg', title:'Drita e mengjesit' },
   { src:'assets/gallery/xhamiabrenda3.jpg', title:'Minarja' },
-  { src:'assets/gallery/xhamia5.jpg', title:'Hyrja kryesore' }
+  { src:'assets/gallery/xhamiajasht1.jpg', title:'Hyrja kryesore' }
 ];
 
 function tinyHaptic(){if(!state.prefs||state.prefs.hapticEnabled===false)return;try{if(navigator.vibrate)navigator.vibrate(8)}catch(e){}}
