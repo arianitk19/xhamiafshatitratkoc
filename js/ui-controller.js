@@ -24,7 +24,7 @@ const GALLERY_ITEMS = [
   { src:'assets/gallery/xhamia2.jpg', title:'Mihrabi' },
   { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brendia' },
   { src:'assets/gallery/xhamiabrenda2.jpg', title:'Drita e mengjesit' },
-  { src:'assets/gallery/xhamia4.jpg', title:'Minarja' },
+  { src:'assets/gallery/xhamiabrenda3.jpg', title:'Minarja' },
   { src:'assets/gallery/xhamia5.jpg', title:'Hyrja kryesore' }
 ];
 
