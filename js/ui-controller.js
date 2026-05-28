@@ -23,7 +23,7 @@ const GALLERY_ITEMS = [
   { src:'assets/gallery/xhamiaa1.jpg', title:'Pamja jashtme' },
   { src:'assets/gallery/xhamiajasht2.jpg', title:'Pamje e Jashtme' },
   { src:'assets/gallery/xhamiabrenda1.jpg', title:'Brenda' },
-  { src:'assets/gallery/xhamiabrenda2.jpg', title:'Brenda' },
+  { src:'assets/gallery/xhamiabrenda5.jpg', title:'Brenda' },
   { src:'assets/gallery/xhamiabrenda3.jpg', title:'Brenda' },
   { src:'assets/gallery/xhamiajasht1.jpg', title:'Minarja' }
 ];
