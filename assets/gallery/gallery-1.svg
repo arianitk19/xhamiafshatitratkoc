@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0F162A"/><stop offset="70%" stop-color="#1F3B2C"/><stop offset="100%" stop-color="#264a37"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#s1)"/>
+  <g opacity="0.55" fill="#fff"><circle cx="120" cy="80" r="1.5"/><circle cx="320" cy="140" r="1"/><circle cx="500" cy="60" r="1.5"/><circle cx="640" cy="180" r="1"/><circle cx="720" cy="280" r="1"/><circle cx="200" cy="220" r="1"/></g>
+  <g transform="translate(0 80)">
+    <g fill="#D6C7A1">
+      <ellipse cx="400" cy="380" rx="120" ry="140"/>
+      <rect x="270" y="430" width="260" height="60" rx="4"/>
+      <rect x="220" y="490" width="360" height="160"/>
+      <rect x="218" y="240" width="28" height="410"/>
+      <rect x="554" y="240" width="28" height="410"/>
+    </g>
+    <g fill="#BFA46F">
+      <polygon points="218,240 246,240 232,210"/>
+      <polygon points="554,240 582,240 568,210"/>
+      <rect x="396" y="220" width="8" height="24"/>
+      <path d="M400 200 a14 14 0 1 0 0.1 0 a10 10 0 1 1 -0.1 0 z"/>
+    </g>
+    <rect x="370" y="560" width="60" height="90" fill="#1F3B2C" rx="30"/>
+  </g>
+</svg>

@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="sq" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B1020" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Xhamia Ratkoc" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="application-name" content="Xhamia Ratkoc" />
+  <meta name="description" content="Aplikacioni zyrtar i Xhamise se Fshatit Ratkoc - Rahovec, Kosove. Kohe namazi nga BIK." />
+  <title>Xhamia e Fshatit Ratkoc</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/icon.svg" />
+  <link rel="mask-icon" href="assets/icons/icon.svg" color="#BFA46F" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Inline utilities so we don't need Tailwind CDN (works fully offline) */
+    .min-h-screen{min-height:100vh}
+    .max-w-2xl{max-width:42rem}.mx-auto{margin-left:auto;margin-right:auto}
+    .px-5{padding-left:1.25rem;padding-right:1.25rem}.px-4{padding-left:1rem;padding-right:1rem}
+    .py-3{padding-top:.75rem;padding-bottom:.75rem}.pt-2{padding-top:.5rem}.pb-3{padding-bottom:.75rem}.pb-28{padding-bottom:7rem}
+    .p-2{padding:.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}
+    .mt-1{margin-top:.25rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-10{margin-top:2.5rem}
+    .ml-auto{margin-left:auto}.mb-2{margin-bottom:.5rem}
+    .flex{display:flex}.grid{display:grid}.inline-flex{display:inline-flex}.hidden{display:none}
+    .items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}
+    .justify-between{justify-content:space-between}.justify-center{justify-content:center}.flex-col{flex-direction:column}
+    .gap-2{gap:.5rem}.gap-3{gap:.75rem}
+    .grid-cols-2{grid-template-columns:repeat(2,1fr)}.grid-cols-3{grid-template-columns:repeat(3,1fr)}
+    .w-9{width:2.25rem}.w-10{width:2.5rem}.w-24{width:6rem}.w-40{width:10rem}.w-4{width:1rem}.w-5{width:1.25rem}
+    .h-1{height:.25rem}.h-9{height:2.25rem}.h-10{height:2.5rem}.h-24{height:6rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-1\.5{height:.375rem}
+    .text-xs{font-size:.75rem}.text-sm{font-size:.875rem}.text-base{font-size:1rem}.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem}.text-3xl{font-size:1.875rem}
+    .font-semibold{font-weight:600}.font-bold{font-weight:700}.font-extrabold{font-weight:800}
+    .uppercase{text-transform:uppercase}.tracking-wide{letter-spacing:.06em}.tracking-widest{letter-spacing:.18em}
+    .leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}
+    .text-center{text-align:center}.text-right{text-align:right}.text-left{text-align:left}
+    .text-sand{color:#D6C7A1}.text-gold{color:#BFA46F}.text-ink{color:#E9EDF7}.text-ink-dim{color:#9aa3b8}
+    .bg-midnight{background-color:#0B1020}.bg-emerald{background-color:#1F3B2C}
+    .rounded-xl{border-radius:.75rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}
+    .overflow-hidden{overflow:hidden}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.sticky{position:sticky}
+    .top-0{top:0}.top-4{top:1rem}.right-4{right:1rem}.bottom-0{bottom:0}.bottom-6{bottom:1.5rem}.bottom-24{bottom:6rem}.left-4{left:1rem}.left-3{left:.75rem}.right-3{right:.75rem}.inset-x-0{left:0;right:0}.inset-0{top:0;right:0;bottom:0;left:0}.left-1\/2{left:50%}.top-1\/2{top:50%}
+    .z-40{z-index:40}.z-50{z-index:50}.z-100{z-index:100}.z-60{z-index:60}
+    .border{border-width:1px}.border-b{border-bottom-width:1px}.border-white\/5{border-color:rgba(255,255,255,.05)}.border-white\/10{border-color:rgba(255,255,255,.1)}
+    .tabular-nums{font-variant-numeric:tabular-nums}
+    .backdrop-blur-xl{backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+    .bg-midnight\/70{background-color:rgba(11,16,32,.7)}.bg-black\/90{background-color:rgba(0,0,0,.9)}.bg-white\/5{background-color:rgba(255,255,255,.05)}
+    .opacity-0{opacity:0}
+    .pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}
+    .max-w-full{max-width:100%}.max-h-full{max-height:100%}
+    .object-contain{object-fit:contain}
+    .divide-y > * + *{border-top-width:1px}.divide-white\/5 > * + *{border-top-color:rgba(255,255,255,.05)}
+    .ring-1{box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+    /* Hero card backgrounds */
+    .hero-grad{background:radial-gradient(1200px 600px at 10% -10%,rgba(31,59,44,.55),transparent 60%),radial-gradient(900px 600px at 110% 10%,rgba(191,164,111,.15),transparent 60%),radial-gradient(800px 600px at 50% 120%,rgba(31,59,44,.35),transparent 60%);}
+    .next-card{background:linear-gradient(135deg,rgba(31,59,44,.7),rgba(14,20,48,.7));box-shadow:0 30px 60px -20px rgba(0,0,0,.45),0 8px 24px -10px rgba(0,0,0,.45)}
+    .next-progress{background:linear-gradient(90deg,#BFA46F,#D6C7A1,#BFA46F);background-size:200% 100%;animation:shine 6s linear infinite}
+    @keyframes shine{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    .font-display{font-family:'Plus Jakarta Sans',Inter,system-ui,sans-serif}
+    .font-arabic{font-family:Amiri,serif}
+    .translate-y-neg-half{transform:translateY(-50%)}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit;color:inherit}
+    img{max-width:100%;display:block}
+  </style>
+</head>
+<body class="bg-midnight text-ink">
+
+  <div id="splash" class="fixed inset-0 z-100 bg-midnight hero-grad flex flex-col items-center justify-center">
+    <div class="splash-orb relative">
+      <div class="orb-ring"></div>
+      <img src="assets/icons/icon.svg" alt="Logo" class="w-24 h-24 rounded-3xl" style="box-shadow:0 0 0 1px rgba(191,164,111,.35),0 10px 30px -10px rgba(191,164,111,.35)" />
+    </div>
+    <h1 class="mt-8 font-display font-extrabold text-2xl text-sand">Xhamia e Fshatit Ratkoc</h1>
+    <p class="mt-3 text-sm text-ink-dim">Ratkoc - Kosove</p>
+    <div class="mt-10 w-40 h-1 rounded-full overflow-hidden bg-white/5">
+      <div class="splash-bar h-1 next-progress"></div>
+    </div>
+  </div>
+
+  <div id="app" class="min-h-screen bg-midnight hero-grad pb-28" style="display:none">
+
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-midnight/70 border-b border-white/5">
+      <div class="max-w-2xl mx-auto px-5 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden ring-1" style="background:linear-gradient(135deg,#1F3B2C,#0E1430)">
+            <img src="assets/icons/icon.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div class="leading-tight">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Bashkesia Islame e Kosoves</p>
+            <p class="text-sm font-semibold text-sand">Xhamia Ratkoc</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="onlineDot" class="status-dot online" title="Statusi i lidhjes"></span>
+          <button id="btnNotifQuick" class="icon-btn" aria-label="Njoftimet">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1112 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 003.4 0"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-5">
+
+      <section class="tab-panel" id="tab-xhamia" data-tab="xhamia">
+        <div class="mt-5">
+          <div class="glass-card relative overflow-hidden p-6">
+            <div class="flex items-start justify-between relative">
+              <div>
+                <p class="text-xs uppercase tracking-widest text-ink-dim">Mireseerdhet</p>
+                <h2 class="font-display font-extrabold text-2xl mt-1 leading-tight">
+                  Xhamia e Fshatit <span class="text-sand">Ratkoc</span>
+                </h2>
+                <p class="text-xs text-ink-dim mt-1">Ratkoc · Kosove</p>
+              </div>
+              <div class="text-right">
+                <div id="clock" class="font-display font-extrabold text-3xl tabular-nums text-sand">--:--:--</div>
+                <div id="dateGregorian" class="text-xs text-ink-dim mt-1">—</div>
+                <div id="dateHijri" class="text-xs text-gold font-arabic mt-1">—</div>
+              </div>
+            </div>
+            <div class="mt-6 relative">
+              <div class="rounded-2xl p-4 next-card ring-1">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-xs uppercase tracking-widest text-sand">Namazi i radhes</p>
+                    <p id="nextPrayerName" class="font-display font-extrabold text-2xl mt-1">—</p>
+                  </div>
+                  <div class="text-right">
+                    <p id="nextPrayerTime" class="font-display font-extrabold text-3xl text-sand tabular-nums">--:--</p>
+                    <p id="nextPrayerCountdown" class="text-xs text-ink-dim mt-1 tabular-nums">—</p>
+                  </div>
+                </div>
+                <div class="mt-4 h-1.5 rounded-full overflow-hidden bg-white/5">
+                  <div id="nextPrayerProgress" class="h-1.5 next-progress" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4" style="display:flex;flex-direction:column;gap:.75rem">
+          <div class="glass-card p-4">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Imami</p>
+            <p class="font-semibold mt-1 text-sand">Daim Abazi</p>
+            <p class="text-xs text-ink-dim mt-1">Hatib & udheheqes fetar</p>
+          </div>
+          <div class="glass-card daily-card p-4" id="dailyCard">
+            <div class="flex items-center justify-between">
+              <p class="text-xs uppercase tracking-widest text-gold" id="dailyKicker">Hadithi i orës</p>
+              <span class="text-xs text-ink-dim tabular-nums" id="dailyTime">—</span>
+            </div>
+            <p class="text-sm leading-relaxed mt-2" id="dailyText" style="color:rgba(233,237,247,.92)">—</p>
+            <p class="text-xs text-gold mt-2" id="dailySource">—</p>
+          </div>
+        </div>
+
+        <button class="kuran-cta mt-4" data-goto="kurani" type="button">
+          <div class="kuran-cta-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.6 5.3 8.6 4.8 6.3 4.8c-.7 0-1.3.5-1.3 1.2v11c0 .7.6 1.2 1.3 1.2 2.3 0 4.3.5 5.7 1.7 1.4-1.2 3.4-1.7 5.7-1.7.7 0 1.3-.5 1.3-1.2V6c0-.7-.6-1.2-1.3-1.2-2.3 0-4.3.5-5.7 1.7Z"/><path d="M12 6.5v13"/></svg>
+          </div>
+          <div class="kuran-cta-txt">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">E re</p>
+            <p class="font-display font-extrabold text-base text-sand">Kurani Famelartë</p>
+            <p id="kuranCtaSub" class="text-xs text-ink-dim mt-1">114 sure · shqip & arabisht · audio</p>
+          </div>
+          <svg class="kuran-cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+
+        <div class="glass-card mt-4 p-2">
+          <div id="quickPrayerList"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <button class="quick-action" data-goto="namazi">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>Kohet</span>
+          </button>
+          <button class="quick-action" data-goto="galeria">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-9 9"/></svg>
+            <span>Galeri</span>
+          </button>
+          <button class="quick-action" data-goto="rreth">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="7.8" r="0.6" fill="currentColor"/></svg>
+            <span>Rreth</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-namazi" data-tab="namazi" style="display:none">
+        <div class="mt-5">
+          <div class="glass-card p-5">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-widest text-ink-dim">Kohet e namazit</p>
+                <p id="prayerDateLabel" class="font-display font-extrabold text-xl mt-1">—</p>
+                <p id="prayerHijriLabel" class="text-xs text-gold font-arabic mt-1">—</p>
+              </div>
+              <div class="flex flex-col items-end">
+                <span id="prayerSourceBadge" class="badge">BIK</span>
+                <span class="text-xs text-ink-dim mt-1">Ratkoc · Kosove</span>
+              </div>
+            </div>
+            <div class="mt-5 rounded-2xl p-4 next-card ring-1">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-widest text-sand">Tani aktiv</p>
+                  <p id="currentPrayerName" class="font-display font-extrabold text-2xl mt-1">—</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs uppercase tracking-widest text-sand">Mbetet</p>
+                  <p id="currentPrayerCountdown" class="font-display font-extrabold text-2xl text-sand tabular-nums">--:--:--</p>
+                </div>
+              </div>
+            </div>
+            <div id="prayerList" class="mt-4" style="display:flex;flex-direction:column;gap:.5rem"></div>
+            <div class="mt-5 grid grid-cols-3 gap-2">
+              <button data-source="bik" class="src-btn" type="button">BIK</button>
+              <button data-source="aladhan" class="src-btn" type="button">Aladhan</button>
+              <button data-source="diyanet" class="src-btn" type="button">Diyanet</button>
+            </div>
+            <div class="mt-3 flex items-center justify-between text-xs text-ink-dim">
+              <span id="lastSyncLabel">—</span>
+              <button id="btnRefreshPrayer" class="link-btn" type="button">Rifresko</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-rreth" data-tab="rreth" style="display:none">
+        <div class="mt-5" style="display:flex;flex-direction:column;gap:1rem">
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Historiku</p>
+            <h2 class="font-display font-extrabold text-xl mt-1">Xhamia e Fshatit Ratkoc</h2>
+            <p class="text-sm leading-relaxed mt-3" style="color:rgba(233,237,247,.9)">
+              Xhamia e fshatit Ratkoc, pjese e komunes se Rahovecit, eshte nje vater e gjalle e jetes fetare, edukative dhe shoqerore per banoret e fshatit dhe komunitetin perreth. Qe nga themelimi, ajo ka sherbyer si vend i faljes, mesimit te Kuranit dhe ruajtjes se vlerave islame e kombetare ne Kosove.
+            </p>
+            <p class="text-sm leading-relaxed mt-3" style="color:rgba(233,237,247,.9)">
+              Xhamia funksionon nen Bashkesine Islame te Kosoves (BIK), ne harmoni me udhezimet zyrtare dhe me kalendarin e namazit te miratuar nga BIK-u per Kosoven.
+            </p>
+          </div>
+          <div class="glass-card p-5">
+            <div class="flex items-center gap-3">
+              <div class="avatar-circle">DA</div>
+              <div>
+                <p class="text-xs uppercase tracking-widest text-ink-dim">Imami</p>
+                <p class="font-semibold text-sand">Daim Abazi</p>
+              </div>
+            </div>
+            <p class="text-sm mt-3 leading-relaxed" style="color:rgba(233,237,247,.85)">
+              Imami i xhamise udheheq namazet, mban hytben e xhumase dhe ofron mesime fetare, keshillim dhe edukim islam per te rinjte dhe komunitetin. Ai eshte lidhje qendrore mes besimtareve dhe institucionit fetar.
+            </p>
+          </div>
+          <div class="glass-card p-5">
+            <div class="flex items-center gap-3">
+              <div class="avatar-circle">MK</div>
+              <div>
+                <p class="text-xs uppercase tracking-widest text-ink-dim">Muezini</p>
+                <p class="font-semibold text-sand">Mehmet Krasniqi</p>
+              </div>
+            </div>
+            <p class="text-sm mt-3 leading-relaxed" style="color:rgba(233,237,247,.85)">
+              Muezini eshte zeri i thirrjes se ezanit pese here ne dite dhe kujdeset per pergatitjen e xhamise per namazet, mirembajtjen e brendshme, si dhe sherbimet ditore per besimtaret.
+            </p>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Komuniteti</p>
+            <p class="text-sm mt-3 leading-relaxed" style="color:rgba(233,237,247,.85)">
+              Xhamia ofron mesim-besim, leksione, aktivitete me te rinj dhe sherbime per familjet ne raste te rendesishme. Ajo eshte vend takimi i komunitetit dhe simbol i identitetit islam e kosovar te fshatit.
+            </p>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Kontakti</p>
+            <div class="mt-3" style="display:flex;flex-direction:column;gap:.5rem;font-size:.875rem">
+              <div class="flex items-center gap-3">
+                <svg viewBox="0 0 24 24" class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+                <span>Fshati Ratkoc, Komuna e Rahovecit, Kosove</span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/pfiu2LZWQPod842F9" target="_blank" rel="noopener" style="margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;color:#BFA46F">
+              Hap ne Google Maps
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-kurani" data-tab="kurani" style="display:none">
+        <!-- ===== PAMJA E LISTES ===== -->
+        <div id="quranListView">
+          <div class="mt-5">
+            <div class="glass-card p-5 quran-hero relative overflow-hidden">
+              <p class="text-xs uppercase tracking-widest text-ink-dim">Kurani Famelartë</p>
+              <h2 class="font-display font-extrabold text-2xl mt-1 leading-tight">Lexo &amp; <span class="text-sand">dëgjo</span></h2>
+              <p class="text-xs text-ink-dim mt-1">Përkthim shqip · Sherif Ahmeti · 114 sure</p>
+              <button id="btnContinueReading" class="primary-btn" type="button" style="display:none;margin-top:1rem;width:100%;justify-content:space-between">
+                <span style="display:inline-flex;align-items:center;gap:.5rem"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 3 14 9-14 9V3Z"/></svg>Vazhdo leximin</span>
+                <span id="continueLabel" class="text-xs" style="opacity:.85">—</span>
+              </button>
+              <div id="quranStatsRow" class="quran-stats-row mt-4"></div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="quran-search">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="surahSearch" type="search" inputmode="search" placeholder="Kërko sure, numër ose fjalë…" aria-label="Kërko sure" autocomplete="off" />
+              <button id="surahSearchClear" type="button" aria-label="Pastro" style="display:none"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+            </div>
+            <div class="quran-filters mt-3" id="quranFilters" role="tablist">
+              <button class="qfilter is-active" data-filter="all" type="button">Të gjitha</button>
+              <button class="qfilter" data-filter="fav" type="button">Të preferuara</button>
+              <button class="qfilter" data-filter="meke" type="button">Meke</button>
+              <button class="qfilter" data-filter="medine" type="button">Medine</button>
+            </div>
+          </div>
+
+          <div id="surahList" class="quran-surah-list mt-4" aria-live="polite"></div>
+          <div id="surahEmpty" class="quran-empty" style="display:none">Nuk u gjet asnjë sure.</div>
+        </div>
+
+        <!-- ===== PAMJA E LEXIMIT ===== -->
+        <div id="quranReaderView" style="display:none">
+          <div class="reader-topbar">
+            <button id="btnReaderBack" class="icon-btn" type="button" aria-label="Kthehu"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+            <div class="reader-title">
+              <p id="readerSurahSq" class="font-display font-bold text-sand">—</p>
+              <p id="readerSurahMeta" class="text-xs text-ink-dim">—</p>
+            </div>
+            <div class="reader-actions">
+              <button id="btnReaderFav" class="icon-btn" type="button" aria-label="Shto te të preferuarat"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z"/></svg></button>
+              <button id="btnReaderFont" class="icon-btn" type="button" aria-label="Madhësia e tekstit" style="font-weight:800;font-size:.8rem">Aa</button>
+              <button id="btnReaderAudio" class="icon-btn" type="button" aria-label="Dëgjo suren"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg></button>
+              <button id="btnReaderFocus" class="icon-btn" type="button" aria-label="Modaliteti i fokusit"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/></svg></button>
+            </div>
+          </div>
+
+          <div id="fontPanel" class="font-panel" style="display:none">
+            <span class="text-xs text-ink-dim">Madhësia</span>
+            <button data-font="dec" type="button" class="font-step">A−</button>
+            <input id="fontRange" type="range" min="0.8" max="1.8" step="0.1" value="1" aria-label="Madhësia e tekstit" />
+            <button data-font="inc" type="button" class="font-step">A+</button>
+            <label class="font-arabic-toggle"><input type="checkbox" id="toggleArabic" checked /> <span>Arabisht</span></label>
+          </div>
+
+          <div id="readerBismillah" class="reader-bismillah font-arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+          <div id="readerLoading" class="reader-loading" style="display:none"><span class="spinner"></span> Po ngarkohet sureja…</div>
+          <div id="readerOffline" class="reader-offline" style="display:none">Kjo sure nuk është shkarkuar ende dhe je pa internet. Lidhu një herë në internet që ta ruash për lexim offline.</div>
+          <div id="ayahList" class="ayah-list"></div>
+          <div id="readerSurahNav" class="reader-surah-nav">
+            <button id="btnPrevSurah" class="secondary-btn" type="button"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Para</button>
+            <button id="btnNextSurah" class="secondary-btn" type="button">Pas <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-galeria" data-tab="galeria" style="display:none">
+        <div class="mt-5">
+          <div class="flex items-center justify-between">
+            <h2 class="font-display font-extrabold text-xl">Galeria</h2>
+            <span class="text-xs text-ink-dim" id="galleryCount">—</span>
+          </div>
+          <p class="text-xs text-ink-dim mt-3">Fotografi nga Xhamia e Fshatit Ratkoc.</p>
+          <div id="galleryGrid" class="mt-4 grid grid-cols-2 gap-3"></div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-cilesimet" data-tab="cilesimet" style="display:none">
+        <div class="mt-5" style="display:flex;flex-direction:column;gap:1rem">
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Recituesi i Kuranit</p>
+            <p class="text-xs text-ink-dim mt-1">Zgjidh zërin e recitimit për të gjitha suret</p>
+            <select id="setReciterSel" class="settings-select mt-3" aria-label="Recituesi i Kuranit"></select>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Njoftimet</p>
+            <div class="mt-3" style="display:flex;flex-direction:column;gap:.5rem">
+              <label class="toggle-row">
+                <div>
+                  <p class="text-sm font-semibold">Njoftime per kohen e namazit</p>
+                  <p class="text-xs text-ink-dim">10 min para, 5 min para dhe kur hyn koha</p>
+                </div>
+                <input type="checkbox" id="setNotifEnabled" class="toggle" />
+              </label>
+              <label class="toggle-row">
+                <div>
+                  <p class="text-sm font-semibold">Ezan audio </p>
+                  <p class="text-xs text-ink-dim">Luaj nje ton te dinjitetshem kur hyn koha</p>
+                </div>
+                <input type="checkbox" id="setAdhanEnabled" class="toggle" />
+              </label>
+              <label class="toggle-row">
+                <div>
+                  <p class="text-sm font-semibold">Vibrim</p>
+                  <p class="text-xs text-ink-dim">Reagim haptik per butonat dhe njoftimet</p>
+                </div>
+                <input type="checkbox" id="setHapticEnabled" class="toggle" />
+              </label>
+            </div>
+            <button id="btnTestNotif" class="secondary-btn" type="button" style="margin-top:1rem;width:100%">Provo nje njoftim tani</button>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Burimi i koheve te namazit</p>
+            <div class="mt-3 grid grid-cols-3 gap-2">
+              <button data-source="bik" class="src-btn" type="button">BIK</button>
+              <button data-source="aladhan" class="src-btn" type="button">Aladhan</button>
+              <button data-source="diyanet" class="src-btn" type="button">Diyanet</button>
+            </div>
+            <p class="text-xs text-ink-dim mt-3">BIK eshte burimi primar - te dhena zyrtare nga Takvimi i Bashkesise Islame te Kosoves. Aladhan dhe Diyanet ofrohen si alternativa online.</p>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Pamja</p>
+            <div class="mt-3 grid grid-cols-3 gap-2">
+              <button data-theme="dark" class="theme-btn" type="button">Erret</button>
+              <button data-theme="soft" class="theme-btn" type="button">Soft</button>
+              <button data-theme="light" class="theme-btn" type="button">Drita</button>
+            </div>
+          </div>
+          <div class="glass-card p-5">
+            <p class="text-xs uppercase tracking-widest text-ink-dim">Te dhenat</p>
+            <div class="mt-3 flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold">Modaliteti offline</p>
+                <p id="offlineLabel" class="text-xs text-ink-dim">Statusi: —</p>
+              </div>
+              <span id="offlineIndicator" class="badge">—</span>
+            </div>
+            <button id="btnClearCache" class="danger-btn" type="button" style="margin-top:1rem;width:100%">Pastro kujtesen e aplikacionit</button>
+            <p class="text-xs text-ink-dim mt-3">Versioni: <span id="appVersion">2026</span></p>
+          </div>
+          <div class="glass-card p-5 text-center">
+            <p class="text-xs text-ink-dim">Me dashuri per komunitetin e Ratkocit</p>
+            <p class="text-xs text-ink-dim mt-1">Bashkesia Islame e Kosoves · BIK</p>
+            <p class="text-xs text-ink-dim mt-3">Te dhenat e namazit: <a href="https://github.com/drilonjaha/kohet-e-namazit-kosove-json" target="_blank" rel="noopener" style="color:#BFA46F">drilonjaha/kohet-e-namazit-kosove-json</a></p>
+          </div>
+        </div>
+      </section>
+
+      <div style="height:2.5rem"></div>
+    </main>
+
+    <nav id="bottomNav" class="fixed bottom-0 inset-x-0 z-40" aria-label="Navigimi kryesor">
+      <div class="max-w-2xl mx-auto px-4 pb-3 pt-2">
+        <div class="nav-shell" role="tablist">
+          <button class="nav-btn is-active" data-tab="xhamia" type="button" role="tab" aria-selected="true" aria-label="Xhamia">
+            <span class="nav-pill" aria-hidden="true"></span>
+            <span class="nav-icon">
+              <svg class="ico-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.6 1.8 3 2.7 3 4.4 0 1.5-1.3 2.6-3 2.6S9 8.9 9 7.4C9 5.7 10.4 4.8 12 3Z"/><path d="M4 21v-7.5c0-1.2 1-2.5 2.4-3M19.6 10.5c1.4.5 2.4 1.8 2.4 3V21M4 21h16M8 21v-3a4 4 0 0 1 8 0v3"/></svg>
+              <svg class="ico-fill" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c1.9 2 3.4 3.2 3.4 5.2 0 1.8-1.5 3-3.4 3S8.6 9.2 8.6 7.4C8.6 5.4 10.1 4.2 12 2.2Z"/><path d="M3.5 21v-7.4c0-1.4 1.1-2.8 2.7-3.3.5-.15.95.28.83.79C6.9 11.9 6.7 12.9 6.7 14V21H3.5Zm13.8 0v-7c0-1.1-.2-2.1-.16-2.9-.12-.5.33-.94.83-.79 1.6.5 2.73 1.9 2.73 3.3V21h-3.2ZM8 21v-3a4 4 0 0 1 8 0v3H8Z"/></svg>
+            </span>
+            <span class="nav-label">Xhamia</span>
+          </button>
+          <button class="nav-btn" data-tab="namazi" type="button" role="tab" aria-selected="false" aria-label="Namazi">
+            <span class="nav-pill" aria-hidden="true"></span>
+            <span class="nav-icon">
+              <svg class="ico-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.7M12 2.5v1.6M8.5 3.2l.7 1.5M15.5 3.2l-.7 1.5"/></svg>
+              <svg class="ico-fill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8" fill="currentColor" stroke="none"/><path d="M12 9.2v4l2.4 1.6" stroke="#0B1020"/><path d="M12 2.5v1.6M8.5 3.2l.7 1.5M15.5 3.2l-.7 1.5"/></svg>
+            </span>
+            <span class="nav-label">Namazi</span>
+          </button>
+          <button class="nav-btn" data-tab="kurani" type="button" role="tab" aria-selected="false" aria-label="Kurani">
+            <span class="nav-pill" aria-hidden="true"></span>
+            <span class="nav-icon">
+              <svg class="ico-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.6 5.3 8.6 4.8 6.3 4.8c-.7 0-1.3.5-1.3 1.2v11c0 .7.6 1.2 1.3 1.2 2.3 0 4.3.5 5.7 1.7 1.4-1.2 3.4-1.7 5.7-1.7.7 0 1.3-.5 1.3-1.2V6c0-.7-.6-1.2-1.3-1.2-2.3 0-4.3.5-5.7 1.7Z"/><path d="M12 6.5v13"/></svg>
+              <svg class="ico-fill" viewBox="0 0 24 24" fill="currentColor"><path d="M11.25 6.1C9.8 5 7.9 4.5 5.9 4.5c-.8 0-1.4.6-1.4 1.4v10.7c0 .8.66 1.36 1.4 1.36 1.9 0 3.66.42 5.05 1.4.18.13.3.06.3-.16V6.5a.5.5 0 0 0 0-.4Zm1.5 0c1.45-1.1 3.35-1.6 5.35-1.6.8 0 1.4.6 1.4 1.4v10.7c0 .8-.66 1.36-1.4 1.36-1.9 0-3.66.42-5.05 1.4-.18.13-.3.06-.3-.16V6.5c0-.16 0-.3 0-.4Z"/></svg>
+            </span>
+            <span class="nav-label">Kurani</span>
+          </button>
+          <button class="nav-btn" data-tab="galeria" type="button" role="tab" aria-selected="false" aria-label="Galeria">
+            <span class="nav-pill" aria-hidden="true"></span>
+            <span class="nav-icon">
+              <svg class="ico-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="8.5" cy="10" r="1.8"/><path d="m20 16-4.5-4.5L7 20"/></svg>
+              <svg class="ico-fill" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4.5h12A3.5 3.5 0 0 1 21.5 8v8a3.5 3.5 0 0 1-.7 2.1l-6.3-6.3a1 1 0 0 0-1.4 0l-2 2-1.1-1.1a1 1 0 0 0-1.4 0l-4.1 4.1A3.5 3.5 0 0 1 2.5 16V8A3.5 3.5 0 0 1 6 4.5Zm2.4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg>
+            </span>
+            <span class="nav-label">Galeria</span>
+          </button>
+          <button class="nav-btn" data-tab="cilesimet" type="button" role="tab" aria-selected="false" aria-label="Cilesimet">
+            <span class="nav-pill" aria-hidden="true"></span>
+            <span class="nav-icon">
+              <svg class="ico-line" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h10M5 12h7M5 17h12"/><circle cx="18" cy="7" r="2.2"/><circle cx="15" cy="12" r="2.2"/><circle cx="20" cy="17" r="2.2"/></svg>
+              <svg class="ico-fill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h10M5 12h7M5 17h12"/><circle cx="18" cy="7" r="2.4" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="2.4" fill="currentColor" stroke="none"/><circle cx="20" cy="17" r="2.4" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="nav-label">Cilesimet</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Gallery fullscreen viewer (image BEFORE buttons, pointer-events-none on container) -->
+    <div id="galleryViewer" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl" style="display:none">
+      <div class="absolute inset-0 flex items-center justify-center p-6 pointer-events-none">
+        <img id="viewerImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-2xl pointer-events-auto" />
+      </div>
+      <button id="btnCloseViewer" type="button" class="icon-btn" style="position:absolute;top:1rem;right:1rem" aria-label="Mbylle">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <button id="btnPrevImg" type="button" class="icon-btn" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%)" aria-label="Para">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="btnNextImg" type="button" class="icon-btn" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%)" aria-label="Pas">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div id="viewerCaption" class="absolute inset-x-0 text-center text-sand text-sm tabular-nums pointer-events-none" style="bottom:1.5rem">—</div>
+    </div>
+
+    <!-- ===== PLAYER-I AUDIO I KURANIT ===== -->
+    <div id="quranMiniPlayer" class="quran-mini" style="display:none">
+      <div class="qm-progress"><div id="qmBar"></div></div>
+      <button id="qmExpand" class="qm-main" type="button" aria-label="Hap player-in">
+        <span class="qm-art"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="20" cy="16" r="3"/></svg></span>
+        <span class="qm-info">
+          <span id="qmTitle" class="qm-title">—</span>
+          <span id="qmReciter" class="qm-reciter">—</span>
+        </span>
+      </button>
+      <button id="qmPrev" class="qm-btn" type="button" aria-label="Para"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 6h2v12H6zM20 6 9 12l11 6z"/></svg></button>
+      <button id="qmPlay" class="qm-btn qm-play" type="button" aria-label="Luaj"><svg class="ic-play" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7 4 19 12 7 20z"/></svg><svg class="ic-pause" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+      <button id="qmNext" class="qm-btn" type="button" aria-label="Pas"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l11 6L4 18z"/></svg></button>
+      <button id="qmClose" class="qm-btn qm-close" type="button" aria-label="Mbylle"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+
+    <div id="quranFullPlayer" class="quran-full" style="display:none" role="dialog" aria-label="Player i Kuranit">
+      <div class="qf-backdrop"></div>
+      <div class="qf-sheet">
+        <button id="qfCollapse" class="qf-collapse" type="button" aria-label="Mbylle"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="qf-art"><span id="qfArtName" class="font-arabic">القرآن</span></div>
+        <div class="qf-meta">
+          <p id="qfTitle" class="qf-title">—</p>
+          <p id="qfReciter" class="qf-reciter">—</p>
+        </div>
+        <input id="qfSeek" class="qf-seek" type="range" min="0" max="1000" value="0" aria-label="Pozicioni" />
+        <div class="qf-times"><span id="qfCur">0:00</span><span id="qfDur">0:00</span></div>
+        <div class="qf-controls">
+          <button id="qfRepeat" class="qf-ctl" type="button" aria-label="Përsërit"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></button>
+          <button id="qfPrev" class="qf-ctl" type="button" aria-label="Sureja para"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M6 6h2v12H6zM20 6 9 12l11 6z"/></svg></button>
+          <button id="qfPlay" class="qf-ctl qf-play" type="button" aria-label="Luaj"><svg class="ic-play" viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M7 4 19 12 7 20z"/></svg><svg class="ic-pause" viewBox="0 0 24 24" width="34" height="34" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+          <button id="qfNext" class="qf-ctl" type="button" aria-label="Sureja pas"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l11 6L4 18z"/></svg></button>
+          <button id="qfSpeed" class="qf-ctl qf-speed" type="button" aria-label="Shpejtësia">1×</button>
+        </div>
+        <div class="qf-extra">
+          <label class="qf-sel">Recituesi
+            <select id="qfReciterSel" aria-label="Recituesi"></select>
+          </label>
+          <div class="qf-extra-btns">
+            <button id="qfAutonext" class="qf-chip is-active" type="button">Auto sureja</button>
+            <button id="qfSleep" class="qf-chip" type="button">Fik pas…</button>
+          </div>
+        </div>
+        <div id="qfSleepMenu" class="qf-sleep-menu" style="display:none">
+          <button data-min="0" type="button">Çaktivizo</button>
+          <button data-min="10" type="button">10 min</button>
+          <button data-min="20" type="button">20 min</button>
+          <button data-min="30" type="button">30 min</button>
+          <button data-min="60" type="button">60 min</button>
+          <button data-min="end" type="button">Fund i sures</button>
+        </div>
+      </div>
+    </div>
+    <audio id="quranAudio" preload="metadata" playsinline></audio>
+
+    <div id="toastHost" class="fixed inset-x-0 z-50 pointer-events-none flex justify-center" style="bottom:6rem;flex-direction:column;align-items:center"></div>
+
+    <div id="installBanner" class="fixed left-4 right-4 z-40" style="bottom:6rem;display:none">
+      <div class="glass-card p-4 flex items-center gap-3">
+        <img src="assets/icons/icon.svg" class="w-10 h-10 rounded-xl" alt="" />
+        <div style="flex:1">
+          <p class="text-sm font-semibold text-sand">Instalo aplikacionin</p>
+          <p class="text-xs text-ink-dim">Qasje me e shpejte</p>
+        </div>
+        <button id="btnDismissInstall" type="button" class="text-xs text-ink-dim" style="padding:.25rem .5rem;background:none;border:none;cursor:pointer">Me vone</button>
+        <button id="btnInstall" type="button" class="primary-btn" style="padding:.4rem .8rem;font-size:.75rem">Instalo</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/prayer-engine.js"></script>
+  <script src="js/quran-data.js"></script>
+  <script src="js/daily-content.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/quran-controller.js"></script>
+  <script src="js/ui-controller.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    /* Çregjistro çdo service worker të vjetër dhe pastro cache-in e aplikacionit,
+       që faqja të ngarkohet GJITHMONË e freskët nga disku — pa versione të vjetra në kesh.
+       Kjo zgjidh problemin "nuk po përditësohet". */
+    (function(){
+      try{
+        if('serviceWorker' in navigator){
+          navigator.serviceWorker.getRegistrations().then(function(rs){
+            rs.forEach(function(r){r.unregister();});
+          }).catch(function(){});
+        }
+        if('caches' in window){
+          caches.keys().then(function(ks){
+            ks.forEach(function(k){ if(k.indexOf('xr-')===0) caches.delete(k); });
+          }).catch(function(){});
+        }
+      }catch(e){}
+    })();
+  </script>
+</body>
+</html>

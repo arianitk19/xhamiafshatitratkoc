@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s6" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#13182E"/><stop offset="100%" stop-color="#37574B"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#s6)"/>
+  <!-- Entrance wall -->
+  <rect x="60" y="100" width="680" height="700" fill="#D6C7A1"/>
+  <!-- Large arched doorway -->
+  <path d="M250 750 L250 380 a150 150 0 0 1 300 0 L550 750 Z" fill="#0B1020"/>
+  <!-- Inner door -->
+  <path d="M310 750 L310 410 a90 90 0 0 1 180 0 L490 750 Z" fill="#1F3B2C"/>
+  <!-- Decorative arch line -->
+  <path d="M250 750 L250 380 a150 150 0 0 1 300 0 L550 750" fill="none" stroke="#BFA46F" stroke-width="6"/>
+  <!-- Gold knockers -->
+  <circle cx="370" cy="600" r="10" fill="#BFA46F"/>
+  <circle cx="430" cy="600" r="10" fill="#BFA46F"/>
+  <!-- Wall pattern -->
+  <g opacity="0.18" stroke="#1F3B2C" stroke-width="1">
+    <line x1="60" y1="200" x2="740" y2="200"/>
+    <line x1="60" y1="280" x2="740" y2="280"/>
+    <line x1="60" y1="700" x2="740" y2="700"/>
+  </g>
+</svg>

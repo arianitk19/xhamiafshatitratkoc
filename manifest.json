@@ -1,0 +1,40 @@
+{
+  "name": "Xhamia e Fshatit Ratkoc",
+  "short_name": "Xhamia Ratkoc",
+  "description": "Aplikacioni zyrtar i Xhamise se Fshatit Ratkoc - Rahovec, Kosove. Kohe namazi nga Bashkesia Islame e Kosoves (BIK).",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#0B1020",
+  "theme_color": "#0B1020",
+  "lang": "sq",
+  "dir": "ltr",
+  "categories": ["lifestyle", "education", "religion"],
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kohet e Namazit",
+      "short_name": "Namazi",
+      "url": "./index.html?tab=namazi",
+      "icons": [{ "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Kurani",
+      "short_name": "Kurani",
+      "url": "./index.html?tab=kurani",
+      "icons": [{ "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Galeria",
+      "short_name": "Galeri",
+      "url": "./index.html?tab=galeria",
+      "icons": [{ "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="s3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0B1020"/><stop offset="100%" stop-color="#324A3D"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#s3)"/>
+  <!-- Inner columns -->
+  <g fill="#D6C7A1">
+    <rect x="120" y="200" width="40" height="500"/>
+    <rect x="320" y="200" width="40" height="500"/>
+    <rect x="520" y="200" width="40" height="500"/>
+    <rect x="640" y="200" width="40" height="500"/>
+  </g>
+  <!-- Arches -->
+  <g fill="none" stroke="#BFA46F" stroke-width="6" opacity="0.7">
+    <path d="M140 220 a100 100 0 0 1 200 0"/>
+    <path d="M340 220 a100 100 0 0 1 200 0"/>
+    <path d="M540 220 a70 70 0 0 1 140 0"/>
+  </g>
+  <!-- Floor -->
+  <rect x="0" y="700" width="800" height="100" fill="#1F3B2C"/>
+  <!-- Pattern carpet -->
+  <g opacity="0.4" fill="#BFA46F"><circle cx="200" cy="750" r="3"/><circle cx="300" cy="750" r="3"/><circle cx="400" cy="750" r="3"/><circle cx="500" cy="750" r="3"/><circle cx="600" cy="750" r="3"/></g>
+</svg>
